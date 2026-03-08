@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using GameJamMVC.Models;
+using GameJam.Models;
 
 namespace GameJamMVC.Controllers
 {
