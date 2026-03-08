@@ -1,11 +1,77 @@
-@model GameJamMVC.Models.Jugador
+@model GameJam.Models.Jugador
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#f4f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:400px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.success{
+    color:green;
+    font-weight:bold;
+}
+
+.error{
+    color:red;
+    font-weight:bold;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    background:#4facfe;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
 
 <h2>Resultado del Registro</h2>
 
 <p><strong>Nombre:</strong> @Model.Nombre</p>
-<p><strong>Fecha de nacimiento:</strong> @Model.FechaNacimiento.ToShortDateString()</p>
+<p><strong>Fecha:</strong> @Model.FechaNacimiento.ToShortDateString()</p>
 <p><strong>Hobbies:</strong> @Model.Hobbies</p>
 
-<h3>@ViewBag.Mensaje</h3>
+@if(Model.PagoMatricula)
+{
+    <p class="success">✔ Registro completado correctamente</p>
+}
+else
+{
+    <p class="error">❌ Ud aún no ha completado su pago</p>
+}
 
-<a href="/Jugador/Registro">Volver</a>
+<a href="/Jugador/Registro">
+<button>Volver</button>
+</a>
+
+</div>
+
+</body>
+</html>
