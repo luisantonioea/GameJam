@@ -1,0 +1,25 @@
+@model GameJamMVC.Models.Jugador
+
+<h2>Registro GameJam</h2>
+
+<form asp-action="Registro" method="post">
+
+    <label>Nombre del jugador</label>
+    <input asp-for="Nombre" />
+    <br /><br />
+
+    <label>Fecha de nacimiento</label>
+    <input asp-for="FechaNacimiento" type="date"/>
+    <br /><br />
+
+    <label>Hobbies</label>
+    <input asp-for="Hobbies" />
+    <br /><br />
+
+    <label>Pago de matrícula</label>
+    <input type="checkbox" asp-for="PagoMatricula" /> Pagado
+    <br /><br />
+
+    <button type="submit">Registrar</button>
+
+</form>
