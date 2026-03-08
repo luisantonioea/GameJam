@@ -1,0 +1,11 @@
+@model GameJamMVC.Models.Jugador
+
+<h2>Resultado del Registro</h2>
+
+<p><strong>Nombre:</strong> @Model.Nombre</p>
+<p><strong>Fecha de nacimiento:</strong> @Model.FechaNacimiento.ToShortDateString()</p>
+<p><strong>Hobbies:</strong> @Model.Hobbies</p>
+
+<h3>@ViewBag.Mensaje</h3>
+
+<a href="/Jugador/Registro">Volver</a>
