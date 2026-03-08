@@ -7,41 +7,41 @@
 <style>
 
 body{
-    font-family:Arial;
-    background:#f4f6f9;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+font-family:Arial;
 }
 
 .card{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    width:400px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.2);
-    text-align:center;
+background:white;
+padding:30px;
+border-radius:12px;
+width:380px;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+text-align:center;
 }
 
 .success{
-    color:green;
-    font-weight:bold;
+color:green;
+font-weight:bold;
 }
 
 .error{
-    color:red;
-    font-weight:bold;
+color:red;
+font-weight:bold;
 }
 
 button{
-    margin-top:20px;
-    padding:10px 20px;
-    border:none;
-    background:#4facfe;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
+margin-top:20px;
+padding:10px 20px;
+border:none;
+border-radius:6px;
+background:#4facfe;
+color:white;
+cursor:pointer;
 }
 
 </style>
@@ -60,11 +60,11 @@ button{
 
 @if(Model.PagoMatricula)
 {
-    <p class="success">✔ Registro completado correctamente</p>
+<p class="success">Registro completado correctamente</p>
 }
 else
 {
-    <p class="error">❌ Ud aún no ha completado su pago</p>
+<p class="error">Ud. aún no ha completado su pago</p>
 }
 
 <a href="/Jugador/Registro">
